@@ -1,10 +1,10 @@
 const express = require('express')
-const app = express()
 const showdata = require('./showdata')
-
-app.set('view engine', 'pug')
+const app = express()
 
 app.use(express.static('public'))
+
+app.set('view engine', 'pug')
 
 app.get('/', (request, response) => {
   return response.render('index', { showdata })
